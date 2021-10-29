@@ -21,6 +21,6 @@ app.all("**", (req, res) => {
     res.send("404 Not Found!")
 })
 
-app.listen(3300, () => {
-    console.log("Server started on PORT 3300");
+app.listen(process.env.PORT || 3300, () => {
+    console.log(`Server started on PORT ${process.env.PORT}`);
 })
