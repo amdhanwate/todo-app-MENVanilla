@@ -14,7 +14,7 @@ spinner = document.querySelector(".spinner-border")
 async function getTasks() {
     todoContainer.innerHTML = "";
     toggleSpinnerDisplay("inline-block");
-    const todos = fetch("http://localhost:3300/api/tasks")
+    const todos = fetch("/api/tasks")
         .then((response) => response.json())
         .then((data) => {
             if (data.length == 0) {
@@ -51,7 +51,7 @@ async function addTask(e) {
         return;
     }
 
-    const postTask = await fetch("http://localhost:3300/api/tasks", {
+    const postTask = await fetch("/api/tasks", {
         method: "post",
         headers: {
             'Content-Type': 'application/json'
@@ -68,7 +68,7 @@ async function addTask(e) {
 }
 
 async function deleteTask(id) {
-    const deletedTask = await fetch(`http://localhost:3300/api/tasks/${id}`, {
+    const deletedTask = await fetch(`/api/tasks/${id}`, {
         method: "delete",
     }).then(response => response.json())
 
@@ -81,7 +81,7 @@ async function updateTask(el) {
         return;
     }
 
-    const postTask = await fetch(`http://localhost:3300/api/tasks/${el.getAttribute("data-id")}`, {
+    const postTask = await fetch(`/api/tasks/${el.getAttribute("data-id")}`, {
         method: "put",
         headers: {
             'Content-Type': 'application/json'
