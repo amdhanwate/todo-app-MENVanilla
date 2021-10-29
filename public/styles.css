@@ -1,8 +1,6 @@
 body {
     min-height: 90vh;
     margin: 5vh auto;
-
-    /* overflow: hidden; */
 }
 
 .no-todos {
