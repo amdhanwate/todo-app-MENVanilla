@@ -1,0 +1,19 @@
+body {
+    min-height: 90vh;
+    margin: 5vh auto;
+
+    /* overflow: hidden; */
+}
+
+.no-todos {
+    display: none;
+}
+
+.btn {
+    min-width: 100px;
+}
+
+.createdAT {
+    min-width: 200px;
+    max-width: 200px;
+}

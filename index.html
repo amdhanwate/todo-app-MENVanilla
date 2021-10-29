@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/styles.css">
+</head>
+
+<body class="container my- border p-5 h-100">
+
+    <h3>
+        2<span class="text-danger">do: </span>
+        <span class="text-muted">A new way to add your Todos</span>
+    </h3>
+    <div class="form-floating">
+        <div class="form-floating mb-3">
+            <input name="title" type="text" class="form-control" id="task-name" placeholder="I want to..." required>
+            <label for="task-name">I want to...</label>
+            <input class="task-add btn btn-primary mt-3" type="button" value="Add Task" aria-label="Add Task" onclick="addTask(event)">
+            <input class="task-update btn btn-primary mt-3" type="button" value="Update Task" aria-label="Update Task" onclick="updateTask(this)">
+            <input class="cancel-update btn btn-primary mt-3" type="button" value="Cancel" aria-label="cancelUpdate" onclick="cancel()">
+        </div>
+    </div>
+
+    <main class="tasks mt-5">
+        <h3 class="mb-3">Your Todos</h3>
+        <p class="no-todos ms-3 mt-3">Nothing to show here..</p>
+        <div class="text-center mt-5">
+            <div class="spinner-border text-danger" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        <div id="todo-container"></div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script src="public/main.js"></script>
+</body>
+
+</html>
