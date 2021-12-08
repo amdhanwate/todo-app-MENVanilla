@@ -1,8 +1,2 @@
-API Endpoints-
-
-root: /api
-
-/task get/post all tasks
-/task:id get post with id
-/put/:id
-/delete/:id
+## Todo using MENVan
+#### Live Demo: [https://todo-men-vanilla.herokuapp.com/](https://todo-men-vanilla.herokuapp.com/)
